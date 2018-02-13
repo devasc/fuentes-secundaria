@@ -1,0 +1,18 @@
+{% include header.html %}
+
+<h1>{{page.title}}</h1>
+{% for section in site.data[page.code].sections %}
+	<div class="section">
+		<a name="{{section.code}}"></a>
+		<h2>{{ section.name }}</h2><br>
+			{% for link in section.links %}
+				<div class="link">
+					<h4>{{ link.name }}</h4>
+					<p>{{link.description}}</p>
+					<a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
+				</div>
+			{% endfor %}
+	</div>
+{% endfor %}
+
+{% include footer.html %}

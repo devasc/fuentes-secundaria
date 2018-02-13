@@ -1,0 +1,5 @@
+page_gen:
+  - index_files: true
+    data: 'books'
+    template: 'book'
+    name: 'code'
