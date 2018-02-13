@@ -3,7 +3,7 @@
 	<strong>{{ book.title }}</strong><br>
 	<ul>
 		{% for section in site.data[book.code].sections %}
-			<li><a href="books/{{ book.code }}/#{{ section.code }}">{{ section.name }}</a></li>
+			<li><a href="/fuentes-secundaria/books/{{ book.code }}/#{{ section.code }}">{{ section.name }}</a></li>
 		{% endfor %}
 	</ul>
 </div>
