@@ -4,15 +4,27 @@
 	</head>
 	<body>
 		<div class="wrap">
-			<h1>{{page.book_title}}</h1>
-			<h2>{{ page.section_title }}</h2><br>
-			{% for link in page.links %}
-				<div class="link">
-					<h4>{{ link.name }}</h4>
-					<p>{{link.description}}</p>
-					<a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
-				</div>
-			{% endfor %}
+			<h1>{{page.titulo_libro}}</h1>
+			<div class="link-section">
+				<h2>Fuentes destacadas</h2>
+				{% for link in page.fuentes_destacadas %}
+					<div class="link">
+						{% if link.titulo %}<h4>{{ link.titulo }}</h4>{% endif %}
+						{% if link.descripcion %}<p>{{link.descripcion}}</p>{% endif %}
+						{% if link.url %}<a href="{{ link.url }}" target="_blank">{{ link.url }}</a>{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+			<div class="link-section">
+				<h2>Fuentes complementarias</h2>
+				{% for link in page.fuentes_complementarias %}
+					<div class="link">
+						{% if link.titulo %}<h4>{{ link.titulo }}</h4>{% endif %}
+						{% if link.descripcion %}<p>{{link.descripcion}}</p>{% endif %}
+						{% if link.url %}<a href="{{ link.url }}" target="_blank">{{ link.url }}</a>{% endif %}
+					</div>
+				{% endfor %}
+			</div>
 		</div>
 	</body>
 </html>

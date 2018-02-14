@@ -1,7 +1,10 @@
 ---
 ---
 {% for book in site.books %}
-{% for link in book.links %}
+{% for link in book.fuentes_destacadas %}
+{{link.url}}$$${{book.url}}<br>
+{% endfor %}
+{% for link in book.fuentes_complementarias %}
 {{link.url}}$$${{book.url}}<br>
 {% endfor %}
 {% endfor %}
