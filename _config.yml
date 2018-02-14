@@ -1,5 +1,10 @@
-page_gen:
-  - index_files: true
-    data: 'books'
-    template: 'book'
-    name: 'code'
+permalink: pretty
+collections:
+  books:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: books
+    values:
+      layout: book
