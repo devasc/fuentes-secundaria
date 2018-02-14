@@ -1,0 +1,7 @@
+---
+---
+{% for book in site.books %}
+{% for link in book.links %}
+{{link.url}}$$${{book.url}}<br>
+{% endfor %}
+{% endfor %}
