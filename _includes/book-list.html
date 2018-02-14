@@ -1,5 +1,5 @@
 {% for book in site.books %}
 	<div class="book">
-		<a href="{{book.url}}"><strong>{{ book.book_title }}</strong> {{ book.section_title }}</a><br>
+		<a href="{{site.url}}{{book.url}}"><strong>{{ book.book_title }}</strong> {{ book.section_title }}</a><br>
 	</div>
 {% endfor %}
